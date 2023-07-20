@@ -1,0 +1,13 @@
+@charset "UTF-8";
+h1.color-rojo{
+	color: red;
+}
+p.color-azul{
+	color:blue;
+}
+img.icono {
+	max-height:70px;
+}
+img {
+	max-height:300px;
+}

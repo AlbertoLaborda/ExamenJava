@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	</link>
+</head>
+<body>
+	<img th:src="@{/images/cam.jpg}" alt="Imagen camaron" align="center" class="icono"></img>
+	<h1 class="color-rojo" th:text="${cabecera}" align="center"></h1>
+	<p th:text="${textoLot}" align="center"></p><br>
+	<table border=1 color ="black" align="center">
+		<tr>
+			<td th:each="premio:${premiados}"><span th:text="${premio}"></span></td>
+		</tr>		
+	</table>
+	
+	<br><br>
+	<a href="/loto/menu">Volver</a>
+</body>
+</html>

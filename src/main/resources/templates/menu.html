@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html smlns:th="https:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+	<img th:src="@{/images/cam.jpg}" alt="Imagen camaron" align="center" class="icono"></img>
+<h1 align="center">Libros:</h1>
+	<table align="center" border="1">
+		<tr>
+			<td>Titulo</td>
+			<td>Autor</td>
+			<td>Genero</td>
+		</tr>
+		<tr th:each="libro:${libros}">
+			<td><a th:href="@{/menu/libro/titulo/} + ${libro.titulo}" th:text="${libro.titulo}"></a></td>
+			<td><a th:href="@{/menu/libro/titulo/} + ${libro.autor}" th:text="${libro.autor}"></a></td>
+			<td><a th:href="@{/menu/libro/} + ${libro.getGenero().getDescripcion()}" th:text="${libro.genero}"></a></td>
+		</tr>
+	</table>
+<br><br>
+<a href="/">Volver</a>
+</body>
+</html>
